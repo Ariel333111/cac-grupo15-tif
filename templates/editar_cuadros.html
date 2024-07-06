@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/ingresar_cuadros.css">
+    <link rel="stylesheet" href="../static/css/tabla_cuadros.css">
+    <title>Editar Cuadro</title>
+</head>
+<body>
+    <header id="header"></header>
+
+    <main>
+        
+        <section>
+            <div>
+                <h2>Editar un cuadro</h2>
+            </div>
+            <div class="container-form">
+                <div class="entrada">
+                    <a class="button" href="../templates/tabla_cuadros.html">Volver a la tabla</a>
+                </div>
+                <form>
+                    
+                    <div>
+                        <label for="id">ID</label>
+                        <input type="number" name="id" id="id" disabled>
+                    </div>
+            
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="autor">Autor:</label>
+                        <input type="text" name="autor" id="autor">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="ancho">Ancho:</label>
+                        <input type="text" name="ancho" id="ancho">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="largo">Largo:</label>
+                        <input type="text" name="largo" id="largo">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="imagen">Imagen:</label>
+                        <input type="text" name="imagen" id="imagen">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="estilo">Estilo:</label>
+                        <input type="text" name="estilo" id="estilo">
+                    </div>
+
+                    
+                    <button class="modificar" type="button" onclick="modificar()">Modificar</button>
+                </form>
+          
+          
+              </div>
+
+        </section>
+    </main>
+
+    
+    <footer></footer>
+
+    <script src="../static/js/editar_cuadros.js"></script>
+    
+    <script src="../static/js/datos_editar.js"></script>
+</body>
+</html>

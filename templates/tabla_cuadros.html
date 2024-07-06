@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/tabla_cuadros.css">
+    <title>Nuestros Cuadros</title>
+</head>
+<body>
+    <!--Esta es la pagina principal de la BD donde accedemos a los datos (cuadros) y tenemos las opciones para hace el CRUD-->
+    <header id="header"></header>
+
+    <main>
+        <section class="container">
+            <h2>Nuestros Cuadros</h2>
+            <br>
+            <br>
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                <a class="nuevo2" href="../index.html">Volver a la Galería</a>
+                
+
+                <a class="nuevo" href="../templates/ingresar_cuadros.html">Nuevo Cuadro</a>
+                
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <p>Cargando .....</p>
+
+                    </section>
+
+                    <section v-else>
+                        
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Autor</th>
+                                        <th>Ancho</th>
+                                        <th>Largo</th>
+                                        <th>Imagen</th>
+                                        <th>Estilo</th>
+                                        <th>Acciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="cuadro in cuadros">
+                                        <td >{{cuadro.id}}</td>
+                                        <td>{{cuadro.nombre}}</td>
+                                        <td>{{cuadro.autor}}</td>
+                                        <td>{{cuadro.ancho}}</td>
+                                        <td>{{cuadro.largo}}</td>
+                                        <td>
+                                            <img :src="cuadro.imagen" alt="">
+                                        </td>
+                                        <td>{{cuadro.estilo}}</td>
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(cuadro.id)">Eliminar</button>
+                                        </td>
+                                        <td>
+                                            <a class="boton" :href="'../templates/editar_cuadros.html?id='+ cuadro.id+'&nombre=' +cuadro.nombre+ '&autor='+cuadro.autor+'&ancho='+cuadro.ancho + '&largo='+cuadro.largo+ '&imagen='+cuadro.imagen+ '&estilo='+cuadro.estilo">Editar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+                
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../static/js/tabla_cuadros.js"></script>
+    
+</body>
+</html>

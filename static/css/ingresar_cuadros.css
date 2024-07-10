@@ -2,6 +2,25 @@
     margin: 0%;
     padding: 0%;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --body-font-size: 16px;
+    --line-height: 1.5;
+  }
+  
+  body {
+    color: #000;
+    background-color: #f8f9fa;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+  }
 
 .container-form{
     background: radial-gradient(circle, #ccfff0, #99adff);

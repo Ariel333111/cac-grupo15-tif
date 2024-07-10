@@ -17,8 +17,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- link referencia Bootstrap -->
   <link rel="icon" type="image/x-icon" href="static/img/logo/favicon1-16.ico" sizes="16x16" />
   <link rel="icon" type="image/x-icon" href="/static/img/logo/favicon2-32.ico" sizes="32x32" />
@@ -51,17 +50,18 @@
           <img src="/assets/login-icon.svg" alt="login-icon" style="height: 7rem" />
         </div>
         <div class="text-center fs-1 fw-bold">Login</div>
+        
         <div class="input-group mt-4">
           <div class="input-group-text bg-info">
             <img src="/assets/username-icon.svg" alt="username-icon" style="height: 1rem" />
           </div>
-          <input class="form-control bg-light" type="text" placeholder="Username" />
+          <input class="form-control bg-light" type="login" placeholder="Usuario" value="usuario" />
         </div>
         <div class="input-group mt-1">
           <div class="input-group-text bg-info">
             <img src="/assets/password-icon.svg" alt="password-icon" style="height: 1rem" />
           </div>
-          <input class="form-control bg-light" type="password" placeholder="Password" />
+          <input class="form-control bg-light" type="password" placeholder="contraseña" value="contraseña" />
         </div>
         <div class="d-flex justify-content-around mt-1">
           <div class="d-flex align-items-center gap-1">
@@ -70,12 +70,14 @@
           </div>
 
         </div>
-        <div class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm">
+        <input type="button" onclick="">
+        <div class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" onclick="entrar()" value="Iniciar sesion">
           Login
         </div>
       </div>  
     </div>
     <script src="/static/js/ingreso_base_de_datos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </main>
 </body>
 

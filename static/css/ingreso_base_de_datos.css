@@ -4,3 +4,17 @@
     box-sizing: border-box;
     
 }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      background-color: #fff;
+      margin-bottom: 1%;
+    }
+
+  .logo{
+    height: 3rem;
+    margin-right: 4px;
+  }

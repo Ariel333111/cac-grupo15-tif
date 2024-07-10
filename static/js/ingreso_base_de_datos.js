@@ -6,7 +6,7 @@ function entrar(){
             
             alert("Bienvenido/a a nuestros cuadros");
 
-            window.location = "tabla_cuadros.html";}
+            window.location = " ";}
         else{
             alert("Por favor ingrese nombre de usuario y contraseña incorrectos")
         }   

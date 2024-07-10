@@ -23,20 +23,25 @@
 </head>
 <body>
     <!--Esta es la pagina principal de la BD donde accedemos a los datos (cuadros) y tenemos las opciones para hace el CRUD-->
-    <header id="header"></header>
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+              <img  class="logo"  src="/static/img/logo/logo.JPG"   alt="galeriacodoacodo.com " />
+              <span>Galería Codo a Codo</span>
+            </div>
+          </div>
+    </header>
 
     <main>
         <section class="container">
-            <h2>Nuestros Cuadros</h2>
+            <h2>Bienvenido Administrador</h2>
             <br>
             <br>
             <div id="app" >
 
                 <!-- Botón Nuevo -->
-                <a class="nuevo2" href="../index.html">Volver a la Galería</a>
-                
-
                 <a class="nuevo" href="../templates/ingresar_cuadros.html">Nuevo Cuadro</a>
+                <a class="nuevo2" href="../index.html">Volver a la Galería</a>
                 
                 <section v-if="error">Lo sentimos se produjo un error</section>
                 <section v-else>
@@ -77,7 +82,7 @@
                                         <td>
                                             <button type="button"  v-on:click="eliminar(cuadro.id)">Eliminar</button>
                                         </td>
-                                        <td>
+                                        <td >
                                             <a class="boton" :href="'../templates/editar_cuadros.html?id='+ cuadro.id+'&nombre=' +cuadro.nombre+ '&autor='+cuadro.autor+'&ancho='+cuadro.ancho + '&largo='+cuadro.largo+ '&imagen='+cuadro.imagen+ '&estilo='+cuadro.estilo">Editar</a>
                                         </td>
                                     </tr>

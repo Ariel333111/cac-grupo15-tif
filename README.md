@@ -9,4 +9,4 @@ Integrantes:
 Ariel Eduardo Oses, 
 Ana Palmares, 
 Osvaldo Prado, 
-María Eugenia Ramos Mexía,
+María Eugenia Ramos Mexía.

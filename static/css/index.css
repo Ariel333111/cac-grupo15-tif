@@ -101,7 +101,7 @@ small {
   }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Sección 1 */
@@ -112,6 +112,7 @@ small {
   flex-direction: column;
   margin-bottom: 1rem;
   position: relative;
+
 
   & article {
     & header {
@@ -129,7 +130,7 @@ small {
   z-index: 1;
   background-color: rgb(240, 248, 255, 0.2);
   height: 30%;
-  margin-top: 25%;
+  margin-top: 10%;
   padding:2%;
   
 }
@@ -163,11 +164,13 @@ small {
 }
 .banner{
   position: z-index;
+  
 }
 
 /* Sección 2 */
 #s2 {
   margin-bottom: 1rem;
+  margin-top: 7%;
 
   & div {
     display: grid;

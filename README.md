@@ -6,7 +6,7 @@ Para ver detalles del mismo ver el archivo pdf en main.
 
 Integrantes:
 
-Ariel Eduardo Oses
-Ana Palmares
-Osvaldo Prado
-María Eugenia Ramos Mexía
+Ariel Eduardo Oses, 
+Ana Palmares, 
+Osvaldo Prado, 
+María Eugenia Ramos Mexía,

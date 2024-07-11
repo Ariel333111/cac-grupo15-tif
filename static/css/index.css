@@ -60,6 +60,7 @@ small {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
   }
 
   .logo-container {
@@ -129,6 +130,7 @@ small {
   background-color: rgb(240, 248, 255, 0.2);
   height: 30%;
   margin-top: 25%;
+  padding:2%;
   
 }
 
@@ -481,6 +483,12 @@ footer {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+  }
+  /* Header */
+  .main-header {
+    .nav-links {
+      visibility: hidden;
+    }
   }
   h1{
     font-size: 2rem;

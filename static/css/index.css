@@ -108,7 +108,7 @@ small {
 #s1 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   margin-bottom: 1rem;
   position: relative;
@@ -136,8 +136,8 @@ small {
 }
 
 #img-animada-contain {
-  width: 95vw;
-  height: 85vh;
+ width: 80vw;
+  height: 80vh; /* 85vh */
   background-size: contain 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,10 +162,7 @@ small {
     background-image: url(../img/art-gallery/art-gallery-3.webp)
   }
 }
-.banner{
-  position: z-index;
-  
-}
+
 
 /* Sección 2 */
 #s2 {
@@ -380,13 +377,21 @@ footer {
 }
 
 /* Media query para dispositivos de escritorio */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1022px) {
 
   /* Container */
   .container {
-    width: 1140px;
+   width: 80%;
     margin-right: auto;
     margin-left: auto;
+  }
+  
+  .banner{
+    width: 80%;
+   
+  }
+  #img-animada-contain {
+    height: 70vh;
   }
 
   /* Sección 2 */
@@ -418,7 +423,7 @@ footer {
 }
 
 /* Media query para tabletas */
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
+@media only screen and (max-width: 1021px) and (min-width: 768px) {
 
   /* Container */
   .container {
@@ -429,12 +434,15 @@ footer {
 
   /* Sección 1 */
   #img-animada-contain {
-    height: 50vh;
+    height: 40vh;
   }
   .banner{
-    border-radius: 2%;
+
     height: 40%;
-    margin-top: 35%;
+   
+    width: auto;
+    padding: 10%;
+    overflow: auto;
   }
   /* Sección 2 */
   #s2 {
@@ -482,11 +490,14 @@ footer {
   /* Container */
   .container {
     width: 100%;
+    height: auto;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    overflow: auto;
   }
+  
   /* Header */
   .main-header {
     .nav-links {
@@ -505,7 +516,9 @@ footer {
   .banner{
     border-radius: 2%;
     height: 50%;
-    margin-top: 30%;
+    width: auto;
+    padding: 10%;
+    overflow: auto;
   }
 
   /* Header */
@@ -571,4 +584,16 @@ footer {
   .derechos {
     margin-top: 2%;
   }
+}
+@media only screen and (max-width: 320px){
+
+  .banner{
+    overflow: auto;
+    padding: 10%;
+
+  }
+  #img-animada-contain {
+    height: 50vh;
+  }
+
 }

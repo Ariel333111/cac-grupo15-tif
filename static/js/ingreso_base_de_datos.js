@@ -2,7 +2,7 @@ function entrar(){
     const usuario = document.getElementById("usuario").value;
     const contraseña = document.getElementById("password").value;
 
-        if (contraseña == "lolopolo" && usuario=="cuadros"){
+        if (contraseña == "lolopolo" && usuario=="admin"){
             
             alert("Bienvenido/a a nuestros cuadros");
 

@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Galería Virtual de Arte es una plataforma online diseñada para brindar a los usuarios una experiencia inmersiva en el mundo del arte." />
+  <meta name="keywords" content="Arte, Galería, Exposición, Pinturas, Codo a Codo, Desarrollo Web, Front-end, HTML, CSS, JavaScript" />
+  <link rel="stylesheet" href="static/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="static/img/logo/favicon1-16.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="/static/img/logo/favicon2-32.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="static/img/logo/favicon3-96.ico" sizes="96x96" />
+  <title>Galería Codo a Codo</title>
+    <link rel="stylesheet" href="../static/css/tabla_cuadros.css">
+    <title>Nuestros Cuadros</title>
 </head>
 <body>
     <!--Esta es la pagina principal de la BD donde accedemos a los datos (cuadros) y tenemos las opciones para hace el CRUD-->
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+              <img  class="logo"  src="/static/img/logo/logo.JPG"   alt="galeriacodoacodo.com " />
+              <span>Galería Codo a Codo</span>
+            </div>
+          </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Bienvenido Administrador</h2>
+            <br>
+            <br>
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                <a class="nuevo" href="../templates/ingresar_cuadros.html">Nuevo Cuadro</a>
+                <a class="nuevo2" href="../index.html">Volver a la Galería</a>
+                
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <p>Cargando .....</p>
+
+                    </section>
+
+                    <section v-else>
+                        
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Autor</th>
+                                        <th>Ancho</th>
+                                        <th>Largo</th>
+                                        <th>Imagen</th>
+                                        <th>Estilo</th>
+                                        <th>Acciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="cuadro in cuadros">
+                                        <td >{{cuadro.id}}</td>
+                                        <td>{{cuadro.nombre}}</td>
+                                        <td>{{cuadro.autor}}</td>
+                                        <td>{{cuadro.ancho}}</td>
+                                        <td>{{cuadro.largo}}</td>
+                                        <td>
+                                            <img :src="cuadro.imagen" alt="">
+                                        </td>
+                                        <td>{{cuadro.estilo}}</td>
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(cuadro.id)">Eliminar</button>
+                                        </td>
+                                        <td >
+                                            <a class="boton" :href="'../templates/editar_cuadros.html?id='+ cuadro.id+'&nombre=' +cuadro.nombre+ '&autor='+cuadro.autor+'&ancho='+cuadro.ancho + '&largo='+cuadro.largo+ '&imagen='+cuadro.imagen+ '&estilo='+cuadro.estilo">Editar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+                
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../static/js/tabla_cuadros.js"></script>
+    
 </body>
 </html>

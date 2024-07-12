@@ -111,7 +111,7 @@ small {
   justify-content: flex-start;
   flex-direction: column;
   margin-bottom: 1rem;
-  position: relative;
+
 
 
   & article {
@@ -126,11 +126,9 @@ small {
   }
 }
 .banner{
-  position: absolute;
-  z-index: 1;
   background-color: rgb(240, 248, 255, 0.2);
   height: 30%;
-  margin-top: 10%;
+  margin-top: 2%;
   padding:2%;
   
 }
